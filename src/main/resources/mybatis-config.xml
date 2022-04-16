@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<settings>-->
+        <!--&lt;!&ndash;开启驼峰命名&ndash;&gt;-->
+        <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
+    <!--</settings>-->
+    <typeAliases>
+        <!--开启类型别名-->
+        <package name="pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <!--设置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--合理化分页参数-->
+            <property name="reasonable" value="true"></property>
+        </plugin>
+    </plugins>
+
+</configuration>
